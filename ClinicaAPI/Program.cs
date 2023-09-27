@@ -5,6 +5,7 @@ using ClinicaAPI.Service.PerfilService;
 using ClinicaAPI.Service.ProntuarioService;
 using ClinicaAPI.Service.UserService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -63,7 +64,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowMyOrigin",
-        builder => builder.WithOrigins("http://localhost:4200")
+        builder => builder.WithOrigins("http://35.232.35.159")
                           .AllowAnyMethod()
                           .AllowAnyHeader());
 });
